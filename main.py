@@ -2,7 +2,7 @@
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
                                  InfraredSensor, UltrasonicSensor, GyroSensor)
-from pybricks.parameters import Port, Stop, Direction, Button, Color
+from pybricks.parameters import Port, Stop, Direction, Button, Color, Button
 from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
@@ -27,3 +27,9 @@ while is_running == True:
         wait(200)
         ev3.light.off()
         is_running = False
+    if button == Button.LEFT_UP:
+        ev3.speaker.set_speech_options("es", None, None, None)
+        ev3.speaker.say("hola")
+    if button == Button.LEFT_UP:
+        ev3.speaker.set_speech_options("es", None, None, None)
+        ev3.speaker.say("hola")
